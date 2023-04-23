@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 
+import { MyPage } from '@/components/common/types';
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import Seo from '@/components/Seo';
 
-export default function NotFoundPage() {
+const NotFoundPage: MyPage = () => {
   return (
     <Layout>
       <Seo templateTitle='Not Found' />
@@ -27,3 +28,6 @@ export default function NotFoundPage() {
     </Layout>
   );
 }
+export default NotFoundPage;
+NotFoundPage.Layout = "Main";
+// HomePage.Layout = "OtherLayout"; -> error Type '"OtherLayout"' is not assignable to type '"Main" | "Admin" | undefined'.
